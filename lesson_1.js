@@ -134,12 +134,3 @@ console.log(num);
 num = parseInt(num, 16);
 
 console.log(num);
-
-
-
-
-
-
-
-
-
