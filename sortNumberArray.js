@@ -1,6 +1,16 @@
-let someArray2 = [231, 48, 52, 1013, 18, 24, 5, 11, 85, '100000'/*, 'Hello'*/];
+let someArray2 = [231, 48, 52, 1013, 18, 24, 5, 11, 85, "100000"/*, 'Hello'*/];
 
-console.log(sortNumberArray(someArray2, 'min'));
+console.log( sortNumberArray(someArray2, 'min') );
+
+/**
+ * Сортирует переданый массив по возростанию и по спаданию
+ *
+ * @param {array} arr массив который передается для сортировки
+ * @param {string} maxOrMin можно передать строку "min" или "max" 
+ * для сортировки массива по возростанию ("max") и по спаданию ("min").
+ * По умолчанию maxOrMin = "max".
+ * @return {array} возвращает отсортированный массив
+ */
 
 function sortNumberArray(arr, maxOrMin = 'max') {
   let newArr;
