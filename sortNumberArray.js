@@ -9,7 +9,7 @@ console.log( sortNumberArray(someArray2, 'min') );
  * @param {string} maxOrMin можно передать строку "min" или "max" 
  * для сортировки массива по возростанию ("max") и по спаданию ("min").
  * По умолчанию maxOrMin = "max".
- * @return {array} возвращает отсортированный массив
+ * @return {array} newArr возвращает отсортированный массив
  */
 
 function sortNumberArray(arr, maxOrMin = 'max') {
