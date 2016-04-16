@@ -1,4 +1,5 @@
-let someArray = [231, 48, 52, 1013, 18, 52, 24, 15, "85"/*, "Hello"*/];
+console.time("test");
+let someArray = [231, 48, 52, 1013, 18, 24, 5, 11, 85, "100000"/*, 'Hello'*/];
 
 console.log( sortNumArray(someArray, "min") );
 
@@ -50,9 +51,10 @@ function sortNumArray(arr, minOrMax = "max") {
  
   return newArr;
 }
+console.timeEnd("test");
 
 
-
+console.time("test2")
 let someArray2 = [231, 48, 52, 1013, 18, 24, 5, 11, 85, "100000"/*, 'Hello'*/];
 
 console.log( sortNumberArray(someArray2, 'min') );
@@ -114,9 +116,10 @@ function sortNumberArray(arr, maxOrMin = 'max') {
 
   return newArr;  
 }
+console.timeEnd("test2");
 
 
-
+console.time("test3");
 let someArray3 = [231, 48, 52, 1013, 18, 24, 5, 11, 85, "100000"/*, 'Hello'*/];
 
 console.log( sortNumberArray(someArray3, 'min') );
@@ -171,3 +174,4 @@ function sortNumberArray(arr, maxOrMin = 'max') {
 
   return newArr;  
 }
+console.timeEnd("test3");
