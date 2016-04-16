@@ -1,6 +1,6 @@
 let someArray2 = [231, 48, 52, 1013, 18, 24, 5, 11, 85, "100000"/*, 'Hello'*/];
 
-console.log( sortNumberArray(someArray2, 'max') );
+console.log( sortNumberArray(someArray2, 'min') );
 
 /**
  * Сортирует переданый массив по спаданию и по возростанию
@@ -36,26 +36,22 @@ function sortNumberArray(arr, maxOrMin = 'max') {
       let count = 0;
 
       for (let j = 0; j < arr.length; j++) {
-        if (i !== j || arr.length) {
-
-          if (maxOrMin === 'max') {
-            if (arr[i] > arr[j]) {
-              count++;
-            }
-          } else if (maxOrMin === 'min') {
-            if (arr[i] < arr[j]) {
-              count++;
-            }
-          } else {
-            return `Вы ввели неверное значение: ${maxOrMin}`;
+        if (maxOrMin === 'max') {
+          if (arr[i] > arr[j]) {
+            count++;
           }
-
-          if (count === arr.length - 1) {
-            newArr.push(parseInt(arr[i]));
-            arr.splice(i, 1);
+        } else if (maxOrMin === 'min') {
+          if (arr[i] < arr[j]) {
+            count++;
           }
+        } else {
+          return `Вы ввели неверное значение: ${maxOrMin}`;
         }
 
+        if (count === arr.length - 1) {
+          newArr.push(parseInt(arr[i]));
+          arr.splice(i, 1);
+        }
       }
 
     }
